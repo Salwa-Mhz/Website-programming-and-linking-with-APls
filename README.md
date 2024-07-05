@@ -1,6 +1,6 @@
 # HTML robot buttons
 
-<html>
+<<html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,6 +19,23 @@
     <button onclick="sendCommand('left')">Left</button>
     <button onclick="sendCommand('right')">Right</button>
 
-  
+    <script>
+        function sendCommand(direction) {
+            fetch('/control', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ direction: direction })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
 </body>
 </html>
