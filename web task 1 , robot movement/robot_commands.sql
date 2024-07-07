@@ -42,7 +42,6 @@ INSERT INTO `robot_commands` (`id`, `command`, `timestamp`) VALUES
 (2, 'left', '2024-07-05 20:00:45'),
 (3, 'backward', '2024-07-05 20:00:45'),
 (4, 'forward ', '2024-07-05 20:00:45'),
-(5, 'stop', '2024-07-05 20:00:45');
 
 --
 -- Indexes for dumped tables
